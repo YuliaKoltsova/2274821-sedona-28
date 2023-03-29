@@ -1,7 +1,7 @@
 # Личный проект «Седона» 
 
 * Студент: [Юлия Кольцова](https://up.htmlacademy.ru/adaptive/28/user/2274821).
-* Наставник: `Неизвестно`.
+* Наставник: [Arthur Litovko](https://github.com/baileys-li).
 
 ---
 
