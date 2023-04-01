@@ -33,13 +33,16 @@
     </header>
     <main class="main-container">
       <section class="inner-hero">
-        <h1 class="inner-hero__title">Sedona</h1>
+        <div class="inner-hero__container">
+          <h1 class="inner-hero__title">Sedona</h1>
+        </div>
       </section>
       <section class="feedback">
-        <h2 class="feedback__title">Оставьте свой отзыв</h2>
-        <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-        <form action="https://echo.htmlacademy.ru/" method="post">
-          <fieldset class="feedback__form form">
+        <div class="feedback__container">
+          <h2 class="feedback__title">Оставьте свой отзыв</h2>
+          <p class="feedback__text">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <form action="https://echo.htmlacademy.ru/" method="post">
+            <fieldset class="feedback__form form">
             <legend class="form__legend">Представьтесь:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -51,12 +54,12 @@
                 <input class="form__input-text" id="surname" name="surname" type="text" placeholder="Фамилия" value="Пустота" required>
               </li>
               <li class="form__item">
-                <label class="form__label-text" for="patronymice">Отчество:</label>
+                <label class="form__label-text" for="patronymic">Отчество:</label>
                 <input class="form__input-text" id="patronymic" name="patronymic" type="text" placeholder="Отчество" value="Викторович">
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="feedback__form form">
+            </fieldset>
+            <fieldset class="feedback__form form">
             <legend class="form__legend">Контактная информация:</legend>
             <ul class="form__list">
               <li class="form__item">
@@ -67,8 +70,9 @@
                 <label class="form__label-text" for="email">Электронная почта*:</label>
                 <input class="form__input-text" id="email" name="e-mail" type="email" placeholder="Введите e-mail" required>
               </li>
-          </fieldset>
-          <fieldset class="feedback__form form">
+            </ul>
+            </fieldset>
+            <fieldset class="feedback__form form">
             <legend class="form__legend">Ваше общее впечатление:</legend>
             <ul class="form__list">
               <li class="form__item form__item--radio">
@@ -84,8 +88,8 @@
                 <input class="form__input-radio" type="radio" name="impression" id="no-answer" value="no-answer">
               </li>
             </ul>
-          </fieldset>
-          <fieldset class="feedback__form form">
+            </fieldset>
+            <fieldset class="feedback__form form">
             <legend class="form__legend">Посещенные достопримечательности:</legend>
             <ul class="form__list">
               <li class="form__item form__item--checkbox">
@@ -104,14 +108,16 @@
                 <label class="form__selection" for="rocks">Красные скалы</label>
                 <input class="form__input-checkbox" type="checkbox" name="rocks" id="rocks">
               </li>
-          </fieldset>
-          <fieldset class="feedback__form form">
+            </ul>
+            </fieldset>
+            <fieldset class="feedback__form form">
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <textarea class="form__textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
-          <button class="button" type="submit">Отправить отзыв</button>
-          <p class="form__note">* — обязательные поля</p>
-        </form>
+            </fieldset>
+            <button class="button" type="submit">Отправить отзыв</button>
+            <p class="form__note">* — обязательные поля</p>
+          </form>
+        </div>
       </section>
     </main>
     <footer class="footer">
@@ -139,7 +145,7 @@
             </li>
           </ul>
         </div>
-        <div class="-footer__copyright">
+        <div class="footer__copyright">
           <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
             <span class="copyright__text">Разработано</span>
             <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
