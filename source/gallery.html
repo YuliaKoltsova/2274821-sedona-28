@@ -10,10 +10,10 @@
         <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип City of Sedona.">
       </a>
       <nav class="nav">
-        <button class="nav__toggle" type="button">
-          <span class="visually-hidden">Открыть меню</span>
+        <button class="nav__toggle" type="nav__button button">
+          <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <div class="nav__container">
+        <div class="nav__container container">
           <ul class="nav__list">
             <li class="nav__item">
               <a href="index.html">Главная</a>
@@ -33,48 +33,48 @@
     </header>
     <main class="main-container">
       <section class="inner-hero">
-        <div class="inner-hero__container">
-          <h1 class="inner-hero__title">Sedona</h1>
+        <div class="inner-hero__container container">
+          <h1 class="inner-hero__title title">Sedona</h1>
         </div>
       </section>
       <section class="gallery">
-        <div class="gallery__container">
-          <h2 class="gallery__title">Фото и видео</h2>
-          <p class="gallery__text">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+        <div class="container">
+          <h2 class="gallery__title title">Фото и видео</h2>
+          <p class="gallery__description description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
           <ul class="gallery__list">
             <li class="gallery__item photo-card">
             <img class="photo-card__image" src="img/gallery.jpg" width="280" height="280" alt="Дорога на закате.">
-            <h3 class="photo-card__title">Неродные просторы</h3>
+            <h3 class="photo-card__title title">Неродные просторы</h3>
             <p class="photo-card__author">Автор фото: Борис</p>
             <button class="button-like">
-              <span class="visually-hidden">Поставить лайк</span>
+              <span class="visually-hidden">Поставить лайк.</span>
             </button>
             <span class="photo-card__number-likes">1350</span>
             </li>
             <li class="gallery__item photo-card">
             <img class="photo-card__image" src="img/gallery-2.jpg" width="280" height="280" alt="Цветущие кактусы на фоне гор.">
-            <h3 class="photo-card__title">Местная растительность</h3>
+            <h3 class="photo-card__title title">Местная растительность</h3>
             <p class="photo-card__author">Автор фото: Сергей</p>
             <button class="button-like">
-              <span class="visually-hidden">Поставить лайк</span>
+              <span class="visually-hidden">Поставить лайк.</span>
             </button>
             <span class="photo-card__number-likes">143</span>
             </li>
             <li class="gallery__item photo-card">
             <img class="photo-card__image" src="img/gallery-3.jpg" width="280" height="280" alt="Извилистая дорога в горах.">
-            <h3 class="photo-card__title">Дорога на север</h3>
+            <h3 class="photo-card__title title">Дорога на север</h3>
             <p class="photo-card__author">Автор фото: Петр</p>
             <button class="button-like">
-              <span class="visually-hidden">Поставить лайк</span>
+              <span class="visually-hidden">Поставить лайк.</span>
             </button>
             <span class="photo-card__number-likes">96</span>
             </li>
             <li class="gallery__item photo-card">
             <img class="photo-card__image" src="img/gallery-4.jpg" width="280" height="280" alt="Мост Дьявола.">
-            <h3 class="photo-card__title">Мост дьявола</h3>
+            <h3 class="photo-card__title title">Мост дьявола</h3>
             <p class="photo-card__author">Автор фото: Антон</p>
             <button class="button-like">
-              <span class="visually-hidden">Поставить лайк</span>
+              <span class="visually-hidden">Поставить лайк.</span>
             </button>
             <span class="photo-card__number-likes">254</span>
             </li>
@@ -82,16 +82,21 @@
         </div>
       </section>
       <section class="presentation">
-        <div class="presentation__container">
+        <div class="container">
           <h2 class="visually-hidden">Видео-презентация</h2>
-          <p class="presentation__title">Все еще сомневаетесь?</p>
-          <p class="presentation__text">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
-          <video src="#" width="280" height="177" controls></video>
+          <p class="presentation__title title">Все еще сомневаетесь?</p>
+          <p class="presentation__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <a class="presentation__image" src="#">
+            <img src="img/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация Седоны.">
+          </a>
+          <button class="presentation__button">
+            <span class="visually-hidden">Показать видео.</span>
+          </button>
           </div>
       </section>
     </main>
     <footer class="footer">
-      <div class="footer__container">
+      <div class="container">
         <div class="footer__hashtag">
           <p class="hashtag__text">#visitSedona</p>
         </div>
