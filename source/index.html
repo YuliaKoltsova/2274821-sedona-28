@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-  </head>
+    <link href="css/style.css" rel="stylesheet">
   <body class="page__body">
     <header class="header">
       <a class="header__logo">
@@ -13,100 +13,113 @@
         <button class="nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню.</span>
         </button>
-        <div class="nav__container container">
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
-              <a>Главная</a>
+              <a class="nav__link">Главная</a>
             </li>
             <li class="nav__item">
-              <a href="gallery.html">Фото и видео</a>
+              <a class="nav__link" href="gallery.html">Фото и видео</a>
             </li>
             <li class="nav__item">
-              <a href="form.html">Форма отзыва</a>
+              <a class="nav__link" href="form.html">Форма отзыва</a>
             </li>
             <li class="nav__item">
-              <a href="https://htmlacademy.ru">HTML Academy</a>
+              <a class="nav__link" href="https://htmlacademy.ru">HTML Academy</a>
             </li>
           </ul>
-        </div>
       </nav>
     </header>
     <main class="main-container">
       <section class="hero">
-        <div class="container">
+        <div class="hero__container">
           <h1 class="visually-hidden">Сайт города Седона.</h1>
-          <div class="hero__container container">
-            <img src="img/text-index.svg" width="282" height="241" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks.">
+          <div class="hero__text-container container">
+            <img src="img/text-index.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks.">
           </div>
         </div>
       </section>
       <section class="benefits">
-        <div class="container">
+        <div class="benefits__container">
           <h2 class="visually-hidden">Преимущества Седоны.</h2>
-          <p class="benefits__title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
-          <p class="benefits__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
-          <ol class="benefits__list">
+          <div class="benefits__wrapper">
+            <p class="benefits__title title">Седона — небольшой городок в Аризоне, заслуживающий большего!</p>
+            <p class="benefits__description description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+          </div>
+            <ol class="benefits__list">
             <li class="benefits__item benefits__item--background-blue">
-              <h3 class="benefits__title title">Настоящий городок</h3>
-              <p class="benefits__description description">— №1 —</p>
-              <p class="benefits__description description">Седона не атракцион для туристов, там течет своя жизнь</p>
-              <img src="img/benefits-photo1.jpg" width="320" height="256" alt="Дома в городе Седона.">
-              <ul class="benefits__list">
-                <li class="benefits__item benefits__item--house">
-                  <h3 class="benefits__title title">Жилье</h3>
-                  <p class="benefits__description description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-                </li>
-                <li class="benefits__item benefits__item--food">
-                  <h3 class="benefits__title title">Еда</h3>
-                  <p class="benefits__description description">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
-                </li>
-                <li class="benefits__item benefits__item--souvenirs">
-                  <h3 class="benefits__title title">Сувениры</h3>
-                  <p class="benefits__description description">Не только китайского, но и местного производства!</p>
-                </li>
-              </ul>
-            </li>
+              <div class="benefits__wrapper benefits__wrapper--first-blue-element">
+                <h3 class="benefits__title-item title">Настоящий городок</h3>
+                <p class="benefits__number">— №1 —</p>
+                <p class="benefits__description-item description">Седона не атракцион для туристов, там течет своя жизнь</p>
+              </div>
+                <img class="benefits__image" src="img/benefits-photo1.jpg" width="320" height="256" alt="Дома в городе Седона.">
+              </li>
+              <li>
+                <ul class="benefits__list benefits__list--internal">
+                  <li class="benefits__item benefits__item--house">
+                    <div class="benefits__wrapper">
+                      <h3 class="benefits__title title benefits__title--internal-list">Жилье</h3>
+                      <p class="benefits__description description benefits__description--internal-list">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    </div>
+                  </li>
+                  <li class="benefits__item benefits__item--food">
+                    <div class="benefits__wrapper">
+                      <h3 class="benefits__title title benefits__title--internal-list">Еда</h3>
+                      <p class="benefits__description description benefits__description--internal-list">Всегда заказывайте фирменный бургер, Вы не разочаруетесь!</p>
+                    </div>
+                  </li>
+                  <li class="benefits__item benefits__item--souvenirs">
+                    <div class="benefits__wrapper">
+                      <h3 class="benefits__title title benefits__title--internal-list">Сувениры</h3>
+                      <p class="benefits__description description benefits__description--internal-list">Не только китайского, но и местного производства!</p>
+                    </div>
+                  </li>
+                </ul>
+              </li>
             <li class="benefits__item benefits__item--background-blue">
-              <h3 class="benefits__title title">Там есть мост дьявола</h3>
-              <p class="benefits__description description">— №2 —</p>
-              <p class="benefits__description description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
-              <img src="img/benefits-photo2.jpg" width="320" height="256" alt="Мост дьявола.">
+              <div class="benefits__wrapper benefits__wrapper--second-blue-element">
+                <h3 class="benefits__title-item title">Там есть мост дьявола</h3>
+                <p class="benefits__number">— №2 —</p>
+                <p class="benefits__description-item description">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
+              </div>
+              <img class="benefits__image" src="img/benefits-photo2.jpg" width="320" height="256" alt="Мост дьявола.">
             </li>
             <li class="benefits__item benefits__item--background-gray">
-              <h3 class="benefits__title title">Небольшая площадь</h3>
-              <p class="benefits__description description">— №3 —</p>
-              <p class="benefits__description description">Все интересные места находятся очень близко</p>
+              <div class="benefits__wrapper">
+                <h3 class="benefits__title-item title">Небольшая площадь</h3>
+                <p class="benefits__number">— №3 —</p>
+                <p class="benefits__description-item description">Все интересные места находятся очень близко</p>
+              </div>
             </li>
             <li class="benefits__item benefits__item--background-gray">
-              <h3 class="benefits__title title">Красивая дорога</h3>
-              <p class="benefits__description description">— №4 —</p>
-              <p class="benefits__description description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-            </li>
+              <div class="benefits__wrapper">
+                <h3 class="benefits__title-item title">Красивая дорога</h3>
+                <p class="benefits__number">— №4 —</p>
+                <p class="benefits__description-item description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+              </div>
+              </li>
             <li class="benefits__item benefits__item--background-gray">
-              <h3 class="benefits__title title">Мало туристов</h3>
-              <p class="benefits__description description">— №5 —</p>
-              <p class="benefits__description description">Большинство едет в гранд каньон и толпится там</p>
-            </li>
+              <div class="benefits__wrapper">
+                <h3 class="benefits__title-item title">Мало туристов</h3>
+                <p class="benefits__number">— №5 —</p>
+                <p class="benefits__description-item description">Большинство едет в гранд каньон и толпится там</p>
+              </div>
+              </li>
           </ol>
         </div>
       </section>
       <section class="subscribe">
-        <div class="container">
           <h2 class="visually-hidden">Подписаться на рассылку.</h2>
           <p class="subscribe__title title">Заинтересовались?</p>
           <p class="subscribe__description description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
           <a class="subscribe__button button" href="#">Найти гостиницу</a>
-        </div>
       </section>
       <section class="map">
-        <div class="container">
           <h2 class="visually-hidden">Город Седона на карте.</h2>
-          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3999851.4940367425!2d-110.83826344491942!3d34.58823590255613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1680688442646!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
+          <iframe class="map__frame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3999851.4940367425!2d-110.83826344491942!3d34.58823590255613!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1680688442646!5m2!1sru!2sru" width="320" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </section>
     </main>
     <footer class="footer">
-      <div class="container">
         <div class="footer__hashtag">
           <p class="footer__hashtag-text">#visitSedona</p>
         </div>
