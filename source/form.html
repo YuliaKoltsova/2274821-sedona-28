@@ -92,7 +92,7 @@
             <fieldset class="feedback__form-control form-control">
             <legend class="form-control__legend">Посещенные достопримечательности:</legend>
             <ul class="form-control__list">
-              <li class="form-control__item form__item--checkbox">
+              <li class="form-control__item form-control__item--checkbox">
                 <label class="form-control__selection" for="bridge">Мост Дьявола</label>
                 <input class="form-control__input-checkbox" type="checkbox" name="bridge" id="bridge" checked>
               </li>
@@ -114,8 +114,8 @@
             <legend class="form__legend">Опишите свои эмоции:</legend>
             <textarea class="form__textarea" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
-            <button class="form__button button" type="submit">Отправить отзыв</button>
-            <p class="form__note">* — обязательные поля</p>
+            <button class="form-button button" type="submit">Отправить отзыв</button>
+            <p class="form-note">* — обязательные поля</p>
           </form>
         </div>
       </section>
@@ -123,9 +123,9 @@
     <footer class="footer">
       <div class="container">
         <div class="footer__hashtag">
-          <p class="hashtag__text">#visitSedona</p>
+          <p class="footer__hashtag-text">#visitSedona</p>
         </div>
-        <div class="footer__social">
+        <div class="footer__social social">
           <h2 class="visually-hidden">Город Седона в социальных сетях.</h2>
           <ul class="social__list">
             <li class="social__item">
@@ -146,25 +146,25 @@
           </ul>
         </div>
         <div class="footer__copyright">
-          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
-            <span class="copyright__text">Разработано</span>
+          <a class="footer__copyright-link" href="https://htmlacademy.ru/intensive/adaptive">
+            <span class="footer__copyright-text">Разработано</span>
             <svg width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M13.65 0.449951H13.55L0.0500031 1.84995V26.55L13.55 34.5499L26.95 26.55V1.84995L13.65 0.449951ZM25.05 12.55L13.55 5.74995V5.64995H13.45L13.35 5.54995V5.64995L1.95 12.55V3.54995L13.45 2.34995L25.05 3.54995V12.55ZM13.45 7.24995L24.95 13.95L20.45 16.55L13.35 12.35V13.75L19.25 17.25L18.35 17.75L13.35 14.75V16.15L17.15 18.45L16.35 18.95L13.35 17.15V18.55L15.25 19.65L13.45 20.75L2.05 14.05L13.45 7.24995ZM1.95 15.55L13.35 22.35V23.35L5.45 18.65V20.05L13.45 24.85V25.95L5.45 21.25V22.65L13.45 27.45L21.55 22.55V17.35L24.95 15.35V25.35L13.45 32.25L1.95 25.45V15.55Z" fill="black"/>
             </svg>
-            <span class="visually-hidden">Логотип HTML-Academy</span>
+            <span class="visually-hidden">Логотип HTML-Academy.</span>
           </a>
         </div>
       </div>
     </footer>
-    <div class="modal modal__error modal__error--show">
-      <div class="modal__container">
+    <div class="modal">
+      <div class="container modal__error modal__error--show">
         <h2 class="modal__title title">Что-то пошло не так!</h2>
         <p class="modal__description description">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
         <button class="modal__button button" type="button">Ок</button>
       </div>
     </div>
-    <div class="modal modal__success modal__success--show">
-      <div class="modal__container">
+    <div class="modal">
+      <div class="container modal__success modal__success--show">
         <h2 class="modal__title title">Ваш отзыв отправлен</h2>
         <p class="modal__description description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
         <button class="modal__button button" type="button">Закрыть окно</button>
