@@ -1,9 +1,12 @@
 .form {
-  border: none;
+  margin: 0;
+  padding: 24px 0 24px 0;
 }
 
-.form__block {
-  padding: 24px 0 24px 0;
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
 }
 
 .form__list {
@@ -28,20 +31,21 @@
 
 .form__form-input {
   width: 280px;
-  background-color: #f2f2f2;
+  background-color: @input-background;
   border: 0;
   padding: 16px;
 }
 
 .form__form-control {
   padding: 10px 0 10px 0;
+  text-transform: none;
 }
 
 .form__control-mark {
   display: block;
   width: 46px;
   height: 46px;
-  background-color: #f2f2f2;
+  background-color: @input-background;
   position: relative;
   margin-right: 16px;
 }

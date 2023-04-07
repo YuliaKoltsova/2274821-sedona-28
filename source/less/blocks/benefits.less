@@ -34,9 +34,13 @@
 }
 
 .benefits__item--background-blue {
-  background-color: #81b3d2;
-  color: #ffffff;
+  background-color: @main-color;
+  color: @main-color-second;
   padding: 0;
+}
+
+.benefits__item--background-blue .benefits__title-item {
+  color: @main-color-second;
 }
 
 .benefits__title-item {
@@ -74,7 +78,7 @@
 }
 
 .benefits__item--background-gray {
-  background-color: #eeeeee;
+  background-color: @benefits-block;
   padding-top: 23px;
   padding-bottom: 23px;
 }
