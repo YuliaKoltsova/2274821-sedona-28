@@ -1,14 +1,38 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 36px 60px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 36px 120px;
+  }
+}
+
 .footer__hashtag-text {
   .text-big-bold;
   margin: 0;
   padding-top: 33px;
   padding-bottom: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .footer__copyright {
   padding: 30px 18px 33px 18px;
   display: flex;
   justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+
+  }
 }
 
 .footer__copyright-text {
