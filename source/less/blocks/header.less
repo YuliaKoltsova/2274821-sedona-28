@@ -1,0 +1,18 @@
+.header {
+  width: @mobile-container;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
+.header__logo {
+  width: 185px;
+  height: 96px;
+}
+
