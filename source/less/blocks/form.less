@@ -1,0 +1,63 @@
+.form {
+  margin: 0;
+  padding: 24px 0 24px 0;
+}
+
+.form__fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.form__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: start;
+}
+
+.form__item:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.form__legend {
+  margin-bottom: 20px;
+  padding: 0;
+}
+
+.form__label-description {
+  margin-left: 16px;
+}
+
+.form__form-input {
+  width: 280px;
+  background-color: @input-background;
+  border: 0;
+  padding: 16px;
+}
+
+.form__form-control {
+  padding: 10px 0 10px 0;
+  text-transform: none;
+}
+
+.form__control-mark {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: @input-background;
+  position: relative;
+  margin-right: 16px;
+}
+
+.form__control-mark--radio {
+  border-radius: 50%;
+}
+
+.form__control-mark--checkbox {
+  border-radius: 4px;
+}
+
+.form__item--control {
+  display: flex;
+}
