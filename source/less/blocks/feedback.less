@@ -1,19 +1,51 @@
 .feedback__container {
   width: 280px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-content;
+  }
+}
+
+.feedback__title-container {
+  padding: 36px 0 27px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 64px 0 108px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 115px 0 68px 0;
+  }
 }
 
 .feedback__title {
-  margin-top: 36px;
   margin-bottom: 24px;
 }
 
 .feedback__description {
   margin: 0;
-  margin-bottom: 27px;
 }
 
 .feedback__form-container {
   display: grid;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: 295px 295px;
+    column-gap: 58px;
+    row-gap: 50px;
+    // Приблизительное значение row-gap, так как на макете все разное
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-template-columns: 430px 430px;
+    column-gap: 100px;
+    row-gap: 73px;
+    // Приблизительное значение row-gap, так как на макете все разное
+  }
 }
 
 .feedback__note {

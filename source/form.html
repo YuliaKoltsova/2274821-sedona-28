@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
     <header class="header">
@@ -38,9 +39,11 @@
       </div>
       <section class="feedback">
         <div class="feedback__container container">
-          <h1 class="feedback__title title">Оставьте свой отзыв</h1>
-          <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
-          <form class="feedback__form-container" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="feedback__title-container container">
+            <h1 class="feedback__title title">Оставьте свой отзыв</h1>
+            <p class="feedback__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          </div>
+            <form class="feedback__form-container" action="https://echo.htmlacademy.ru/" method="post">
             <div class="feedback__form form">
               <fieldset class="form__fieldset">
                 <legend class="form__legend title">Представьтесь:</legend>
@@ -75,7 +78,7 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback__form form">
+            <div class="feedback__form form big-element">
               <fieldset class="form__fieldset">
                 <legend class="form__legend title">Ваше общее впечатление:</legend>
                 <ul class="form__list">
@@ -97,7 +100,7 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback__form form">
+            <div class="feedback__form form big-element">
               <fieldset class="form__fieldset">
                 <legend class="form__legend title">Посещенные достопримечательности:</legend>
                 <ul class="form__list">
@@ -124,7 +127,7 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback__form form">
+            <div class="feedback__form form big-element">
               <fieldset class="form__fieldset">
                 <legend class="form__legend title ">Опишите свои эмоции:</legend>
                 <textarea class="form__form-input form-text" name="comment" placeholder="Опишите подробно все свои восторги"></textarea>
