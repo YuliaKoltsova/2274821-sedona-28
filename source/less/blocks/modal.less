@@ -3,7 +3,7 @@
   left: 0;
   top: 0;
   display: flex;
-  width: 320px;
+  width: 100%;
   height: 100%;
   background-color: @modal-wrapper;
 }
@@ -12,8 +12,20 @@
   position: relative;
   margin: auto;
   padding: 45px 42px 35px 41px;
-  width: 320px;
+  width: @mobile-width;
   background-color: @main-color-second;
+}
+
+.modal__content--error {
+  @media (min-width: @tablet-width) {
+    width: 400px;
+  }
+}
+
+.modal__content--success {
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
 }
 
 .modal__container--error-close {
