@@ -1,4 +1,18 @@
+.map__container {
+  width: @mobile-width;
+  height: 350px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}
+
 .map__frame {
   .images;
   background-image: url("../../img/map.jpg");
+  display: block;
 }

@@ -1,0 +1,18 @@
+.page {
+  background-color: @input-background;
+  width: 100%;
+}
+
+.page__body {
+  width: 320px;
+  margin: 0 auto;
+  box-shadow: 0 5px 15px @page-shadow;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
+}

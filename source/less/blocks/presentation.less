@@ -1,20 +1,38 @@
 .presentation__container {
-  width: 280px;
+  width: @mobile-content-inner;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-content;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
+}
+
+.presentation__title-container {
+  padding: 43px 0 38px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 58px 0 66px 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 62px 0 64px 0;
+  }
 }
 
 .presentation__title {
-  margin-top: 43px;
   margin-bottom: 27px;
 }
 
 .presentation__description {
   margin: 0;
-  margin-bottom: 38px;
 }
 
 .presentation__image-container {
   position: relative;
-  width: 280px;
+  width: @mobile-content-inner;
   height: 177px;
   background-color: @background-image-color;
 }

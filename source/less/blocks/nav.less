@@ -5,21 +5,40 @@
   padding: 0;
   background-image: url("../../img/menu-icon-open.svg");
   background-color: @main-color-second;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .nav__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
-}
+  width: 320px;
 
-.nav__item {
-  background-color: @main-color;
-  padding: 17px 10px 12px 10px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .nav__link {
   color: @main-color-second;
   .text-title;
   text-decoration: none;
+  display: block;
+  padding: 17px 10px 12px 10px;
+  background-color: @main-color;
+
+  @media (min-width: @tablet-width) {
+    color: @title-color;
+    background-color: @main-color-second;
+    padding: 18px;
+    .text-small;
+  }
 }

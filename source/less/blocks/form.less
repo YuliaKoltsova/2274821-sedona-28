@@ -1,6 +1,10 @@
 .form {
   margin: 0;
   padding: 24px 0 24px 0;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .form__fieldset {
@@ -34,6 +38,10 @@
   background-color: @input-background;
   border: 0;
   padding: 16px;
+}
+
+.form__form-input--textarea {
+  resize: none;
 }
 
 .form__form-control {
