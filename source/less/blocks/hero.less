@@ -1,3 +1,7 @@
+// .hero {
+//   position: relative;
+// }
+
 .hero__container {
   width: @mobile-width;
   .images;
@@ -8,12 +12,26 @@
 
   @media (min-width: @tablet-width) {
     width: @tablet-width;
+    padding-top: 77px;
+    padding-bottom: 91px;
   }
 
   @media (min-width: @desktop-width) {
     width: @desktop-width;
   }
 }
+
+// .hero__container::after {
+//   content: "";
+//   position: absolute;
+//   background-image: url("../../img/intro-triangle.svg");
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   width: 1200px;
+//   height: 57px;
+//   bottom: 0;
+//   right: 0;
+// }
 
 .hero__text-container {
   width: @mobile-content-main;

@@ -1,5 +1,13 @@
 .benefits__title-container {
-  padding: 32px 18px 32px 18px;
+  padding: 32px 18px 16px 18px;
+
+  @media (min-width: @tablet-width) {
+    padding: 48px 33px 55px 33px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 59px 50px 44px 50px;
+  }
 }
 
 .benefits__title {
@@ -7,11 +15,16 @@
   margin-bottom: 35px;
 }
 
+.benefits__description {
+  margin: 0;
+}
+
 .benefits__list {
   margin: 0;
   padding: 0;
   list-style-type: none;
   display: grid;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     grid-template-columns: repeat(3, 256px);
@@ -42,12 +55,30 @@
 }
 
 .benefits__item-container--first-element {
-  padding: 54px 18px 40px 18px;
+  padding: 70px 18px 40px 18px;
 
   @media (min-width: @tablet-width) {
     padding: 52px 33px 31px 33px;
   }
 }
+
+// @media (min-width: @mobile-width) {
+//   .benefits__item-container--first-element::before {
+//     content: "";
+//     position: absolute;
+//     background-image: url("../../img/benefits-triangle.svg");
+//     width: 320px;
+//     height: 37px;
+//     top: 0;
+//     right: 0;
+//   }
+// }
+
+// @media (min-width: @tablet-width) {
+//   .benefits__item-container--first-element::before {
+//     content: "";
+//   }
+// }
 
 .benefits__item-container {
   @media (min-width: @tablet-width) {
@@ -105,14 +136,65 @@
 }
 
 .benefits__item--internal {
-  padding: 8px 18px 0 65px;
+  padding: 8px 18px 0 47px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 60px 33px;
+    padding: 158px 33px 60px 33px;
+    text-align: center;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 69px 50px;
+    padding: 169px 50px 69px 50px;
+  }
+}
+
+@media (min-width: @mobile-width) {
+  .benefits__item--house::before {
+    .insert-icon-general;
+    .insert-icon-mobile;
+    background-image: url("../../img/mobile-icon-house.svg");
+  }
+
+  .benefits__item--food::before {
+    .insert-icon-general;
+    .insert-icon-mobile;
+    background-image: url("../../img/mobile-icon-food.svg");
+  }
+
+  .benefits__item--souvenirs::before {
+    .insert-icon-general;
+    .insert-icon-mobile;
+    background-image: url("../../img/mobile-icon-souvenirs.svg");
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .benefits__item--house::before {
+    .insert-icon-general;
+    background-image: url("../../img/tablet-icon-house.svg");
+    width: 77px;
+    height: 72px;
+    top: 60px;
+    left: 88px;
+  }
+
+  .benefits__item--food::before {
+    .insert-icon-general;
+    background-image: url("../../img/tablet-icon-food.svg");
+    width: 80px;
+    height: 68px;
+    top: 62px;
+    left: 87px;
+  }
+
+  .benefits__item--souvenirs::before {
+    .insert-icon-general;
+    background-image: url("../../img/tablet-icon-souvenirs.svg");
+    width: 66px;
+    height: 75px;
+    top: 64px;
+    left: 98px;
   }
 }
 
