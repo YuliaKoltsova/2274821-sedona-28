@@ -1,13 +1,26 @@
 .hero__container {
-  width: 100%;
+  width: @mobile-width;
   .images;
   background-image: url("../../img/background-image-main.jpg");
   color: @main-color-second;
   padding-top: 91px;
   padding-bottom: 85px;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-width;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: @desktop-width;
+  }
 }
 
 .hero__text-container {
-  @mobile-content-main: 284px;
+  width: @mobile-content-main;
   height: 214px;
+
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
+  }
 }

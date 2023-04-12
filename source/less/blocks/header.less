@@ -1,5 +1,6 @@
 .header {
-  width: @mobile-content-main;
+  width: @mobile-width;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     display: flex;
@@ -13,6 +14,15 @@
 
 .header__logo {
   width: 185px;
-  height: 96px;
-  position: absolute;
+  height: 56px;
+  display: flex;
+  margin: 0 auto;
+  position: relative;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    top: 0;
+    right: 50%;
+    margin-right: -92.5px;
+  }
 }
