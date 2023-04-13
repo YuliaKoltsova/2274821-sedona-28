@@ -27,6 +27,10 @@
 .form__legend {
   margin-bottom: 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .text-big-bold;
+  }
 }
 
 .form__label-description {
@@ -38,6 +42,14 @@
   background-color: @input-background;
   border: 0;
   padding: 16px;
+
+  @media (min-width: @tablet-width) {
+    width: 295px;
+  }
+
+    @media (min-width: @desktop-width) {
+    width: 430px;
+  }
 }
 
 .form__form-input--textarea {
@@ -45,7 +57,7 @@
 }
 
 .form__form-control {
-  padding: 10px 0 10px 0;
+  padding: 10px 10px 10px 0;
   text-transform: none;
 }
 
@@ -68,4 +80,12 @@
 
 .form__item--control {
   display: flex;
+}
+
+@media (min-width: @tablet-width) {
+  .big-element .form__list {
+    display: grid;
+    grid-template-columns: repeat(2, 280px);
+    padding: 0 58px;
+  }
 }

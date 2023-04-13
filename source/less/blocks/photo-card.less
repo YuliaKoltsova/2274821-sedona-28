@@ -1,15 +1,18 @@
 .photo-card {
   text-align: start;
+  display: flex;
+  flex-direction: column;
 }
 
-.photo-card__container {
+.photo-card__link {
+  display: block;
   width: @mobile-content-inner;
   height: 280px;
-  margin-bottom: 25px;
 }
 
 .photo-card__image {
   .images;
+  display: block;
 }
 
 .photo-card__title {
@@ -21,22 +24,95 @@
 .photo-card__author {
   text-transform: none;
   margin: 0;
-  margin-bottom: 11px;
 }
 
 .photo-card__description {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+}
+
+.photo-card__text-container {
+  padding: 15px 0 11px 0;
 }
 
 .photo-card__like {
   display: flex;
+  align-items: end;
 }
 
 .photo-card__button {
-  padding-bottom: 5px;
-  margin-right: 15px;
+  width: 23px;
+  height: 21px;
+  margin-bottom: 5px;
+  margin-right: 14px;
+  border: none;
+  background-color: transparent;
+}
+
+.photo-card__button-icon {
+  fill: @dark-opacity;
 }
 
 .photo-card__number-likes {
   font-weight: 700;
+}
+
+// Tablet
+@media (min-width: @tablet-width) {
+  .photo-card__link {
+    margin-bottom: 0;
+    height: 267px;
+  }
+
+  .big-element .photo-card__link {
+    width: @tablet-content;
+    height: 400px;
+  }
+
+  .photo-card__description {
+    flex-direction: row;
+    background-color: @input-background;
+    justify-content: space-between;
+  }
+
+  .photo-card__text-container {
+    padding: 22px 20px 15px 20px;
+  }
+
+  .photo-card__like {
+    padding: 28px 20px 27px 0;
+  }
+
+  .photo-card__button {
+    margin-right: 9px;
+  }
+}
+
+@media (min-width: @tablet-width) and (max-width: 1199px) {
+  .photo-card:nth-of-type(odd):not(:first-of-type) .photo-card__description {
+    background-color: @color-block-gallery;
+  }
+}
+
+// Desktop
+@media (min-width: @desktop-width) {
+  .big-element .photo-card__link {
+    width: @desktop-width;
+    height: 400px;
+  }
+
+  .photo-card__link {
+    width: 400px;
+    height: 268px;
+  }
+
+  .photo-card__description,
+  .photo-card__title {
+    color: @main-color-second;
+  }
+
+  .photo-card__description {
+    background-color: @dark-opacity;
+    z-index: 3;
+  }
 }
