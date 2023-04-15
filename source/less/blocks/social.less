@@ -11,6 +11,19 @@
   height: 48px;
   margin-right: 6px;
   background-color: @main-color;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-active;
+  }
+}
+
+.social__link:active .social__link-icon {
+  opacity: 0.3;
 }
 
 .social__item:last-child {

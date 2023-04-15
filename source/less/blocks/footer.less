@@ -1,18 +1,25 @@
+// Общие стили
 .footer {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: @mobile-content-inner;
+  padding-top: 33px;
+  padding-bottom: 33px;
+
 
   @media (min-width: @tablet-width) {
+    width: @tablet-content;
     flex-direction: row;
-    padding: 76px 60px;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 120px;
+    width: @desktop-content;
   }
 }
 
+// Hashtag
 .footer__hashtag-text {
   .text-big-bold;
   margin: 0;
@@ -24,17 +31,46 @@
   }
 }
 
+// Copyright
 .footer__copyright {
   padding: 30px 18px 33px 18px;
+  cursor: pointer;
   display: flex;
-  justify-content: center;
 
   @media (min-width: @tablet-width) {
     padding: 0;
   }
 }
 
+.footer__copyright-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-decoration: none;
+}
+
 .footer__copyright-text {
   align-self: center;
   margin-right: 12px;
+}
+
+.footer__copyright-icon {
+  fill: @title-color;
+}
+
+// Состояния copyright
+.footer__copyright-link:hover .footer__copyright-icon {
+  fill: @main-color;
+}
+
+.footer__copyright-link:hover .footer__copyright-text {
+  color: @main-color;
+}
+
+.footer__copyright-link:active .footer__copyright-icon {
+  fill: @copyright-active;
+}
+
+.footer__copyright-link:active .footer__copyright-text {
+  color: @copyright-active;
 }

@@ -47,16 +47,44 @@
   }
 }
 
+// Радиокнопки и чекбоксы
 @media (min-width: @tablet-width) {
   .big-element .form__list {
     display: grid;
-    grid-template-columns: repeat(2, 280px);
-    padding: 0 58px;
-    row-gap: 17px;
+    margin: 0 auto;
+  }
+
+  .big-element .form__list--radio {
+    width: 579px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+  }
+
+  .big-element .form__list--checkbox {
+    width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 32px;
   }
 
   .form__item {
     margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .big-element .form__list--radio {
+    width: 854px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 17px;
+    column-gap: 28px;
+  }
+
+  .big-element .form__list--checkbox {
+    width: 871px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 17px;
+    column-gap: 28px;
   }
 }
 

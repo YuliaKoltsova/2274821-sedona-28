@@ -53,31 +53,23 @@
     background-color: @main-color-second;
     padding: 18px;
     .text-small;
-    min-width: 140px;
-    max-width: 153px;
+    width: 153px;
     box-shadow: none;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 200px;
-    max-width: 240px;
+    width: 240px;
   }
 }
 
-// Место для логотипа на tablet и desktop
-.nav__item--place-logo-left {
+// Место под логотип
+.nav__item:nth-of-type(4n+2) {
   @media (min-width: @tablet-width) {
-    margin-right: 75px;
+    margin-right: 153px;
   }
 
   @media (min-width: @desktop-width) {
-    margin-right: 75px;
-  }
-}
-
-.nav__item--place-logo-right {
-  @media (min-width: @tablet-width) {
-    margin-left: 75px;
+    margin-right: 240px;
   }
 }
 
