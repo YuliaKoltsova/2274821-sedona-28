@@ -6,20 +6,36 @@
   width: 100%;
   height: 100%;
   background-color: @dark-opacity;
+  z-index: 15;
 }
 
 .modal__content {
   position: relative;
   margin: auto;
-  padding: 45px 42px 35px 41px;
   width: @mobile-width;
   background-color: @main-color-second;
 }
 
 .modal__content--error {
+  padding: 45px 42px 35px 41px;
+
   @media (min-width: @tablet-width) {
     width: 400px;
+    padding: 53px 98px 44px 98px;
   }
+}
+
+.modal__content-text {
+  padding: 39px 39px 30px 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 53px 99px 30px 97px;
+  }
+}
+
+.modal__content-button {
+  padding: 20px;
+  background-color: @input-background;
 }
 
 .modal__content--success {
@@ -28,29 +44,47 @@
   }
 }
 
-.modal__container--error-close {
-  display: none;
-}
-
-.modal__container--success-close {
-  display: none;
-}
-
 .modal__title {
   margin: 0;
   margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .text-extra-big;
+  }
 }
 
 .modal__description {
   margin: 0;
-  margin-bottom: 28px;
 }
 
 .modal__button {
   .text-title;
+  margin: 0 auto;
 }
 
 .modal__button--error {
   width: 180px;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+  }
 }
+
+.modal__button--success {
+  width: @mobile-content-inner;
+
+  @media (min-width: @tablet-width) {
+    width: 272px;
+  }
+}
+
+// Показывает/скрывает модальное окно с ошибкой
+.modal__container--error-close {
+  display: none;
+}
+
+// Показывает/скрывает модальное окно "отзыв отправлен"
+// .modal__container--success-close {
+//   display: none;
+// }

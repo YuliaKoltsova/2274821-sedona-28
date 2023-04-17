@@ -28,15 +28,7 @@
   padding: 0;
   list-style-type: none;
   width: 320px;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    width: @tablet-width;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
+  margin-top: 40px;
 }
 
 .nav__link {
@@ -74,7 +66,37 @@
 }
 
 // Состояния ссылок в навигации
+.nav--closed .nav__toggle {
+  background-image: url("../../img/menu-icon-open.svg");
+  background-color: @main-color-second;
+}
+
+.nav--opened .nav__toggle {
+  background-image: url("../../img/menu-icon-close.svg");
+  background-color: transparent;
+}
+
 @media (min-width: @mobile-width) {
+  .nav--closed .nav__list {
+    display: none;
+  }
+
+  .nav--opened .nav__list {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
+
+  .nav--nojs .nav__list {
+    display: block;
+    margin-top: 40px;
+    position: static;
+  }
+
   .nav__link[href]:hover {
     background-color: @hover-main-color;
   }
@@ -85,7 +107,15 @@
   }
 }
 
+// Навигация в tablet и desktop
 @media (min-width: @tablet-width) {
+  .header .nav__list {
+    display: flex;
+    width: @tablet-width;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
   .nav__link[href]:hover {
     color: @main-color;
     background-color: @main-color-second;
@@ -97,45 +127,9 @@
   }
 }
 
-// Навигация в mobile
-@media (min-width: @mobile-width) {
-  .nav--closed .nav__toggle {
-    background-image: url("../../img/menu-icon-open.svg");
-    background-color: @main-color-second;
-  }
-
-  .nav--closed .nav__list {
-    display: none;
-  }
-
-  .nav--opened .nav__list {
-    position: absolute;
-    top: 0;
-  }
-
-  .nav--nojs .nav__toggle {
-    display: none;
-  }
-
-  .nav--nojs .nav__list {
-    position: static;
-    margin-top: 40px;
-  }
-
-  .nav--opened .nav__toggle {
-    background-image: url("../../img/menu-icon-close.svg");
-    background-color: transparent;
-  }
-}
-
-// Навигация в tablet и desktop
-.nav--closed .nav__list {
-  display: none;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+@media (min-width: @desktop-width) {
+  .header .nav__list {
+    width: @desktop-width;
   }
 }
 
