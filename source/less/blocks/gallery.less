@@ -36,13 +36,14 @@
   padding: 0;
   list-style-type: none;
   display: grid;
-  grid-row-gap: 50px;
+  row-gap: 50px;
 
   @media (min-width: @tablet-width) {
-    grid-template-columns: 324px 324px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 0;
   }
 
   @media (min-width: @desktop-width) {
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(3, 1fr);
   }
 }

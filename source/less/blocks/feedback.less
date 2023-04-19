@@ -48,6 +48,23 @@
   }
 }
 
+.feedback__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    grid-column: -1/1;
+    flex-direction: row;
+    align-items: start;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
+    margin: 0 auto;
+  }
+}
+
 .feedback__note {
   .text-extra-small;
   text-align: end;

@@ -8,4 +8,18 @@
   display: block;
   border: none;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: @button-hover;
+  }
+
+  &:active {
+    background-color: @button-active;
+    color: @light-opacity;
+  }
+
+  &:disabled {
+    background-color: @hover-form;
+    color: @main-color-second;
+  }
 }

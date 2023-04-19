@@ -1,10 +1,22 @@
+// Общие стили навигации
 .nav__toggle {
   width: 23px;
   height: 22px;
   border: none;
   padding: 0;
-  background-image: url("../../img/menu-icon-open.svg");
-  background-color: @main-color-second;
+  position: absolute;
+  cursor: pointer;
+  top: 17px;
+  right: 20px;
+  z-index: 5;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     display: none;
@@ -16,15 +28,7 @@
   padding: 0;
   list-style-type: none;
   width: 320px;
-
-  @media (min-width: @tablet-width) {
-    display: flex;
-    width: @tablet-width;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: @desktop-width;
-  }
+  margin-top: 40px;
 }
 
 .nav__link {
@@ -34,11 +38,102 @@
   display: block;
   padding: 17px 10px 12px 10px;
   background-color: @main-color;
+  box-shadow: 0 1px 0 rgba(1, 1, 1, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.2);
 
   @media (min-width: @tablet-width) {
     color: @title-color;
     background-color: @main-color-second;
     padding: 18px;
     .text-small;
+    width: 153px;
+    box-shadow: none;
   }
+
+  @media (min-width: @desktop-width) {
+    width: 240px;
+  }
+}
+
+// Место под логотип
+.nav__item:nth-of-type(4n+2) {
+  @media (min-width: @tablet-width) {
+    margin-right: 153px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-right: 240px;
+  }
+}
+
+// Состояния ссылок в навигации
+.nav--closed .nav__toggle {
+  background-image: url("../../img/menu-icon-open.svg");
+  background-color: @main-color-second;
+}
+
+.nav--opened .nav__toggle {
+  background-image: url("../../img/menu-icon-close.svg");
+  background-color: transparent;
+}
+
+@media (min-width: @mobile-width) {
+  .nav--closed .nav__list {
+    display: none;
+  }
+
+  .nav--opened .nav__list {
+    position: absolute;
+    top: 0;
+    margin-top: 0;
+  }
+
+  .nav--nojs .nav__toggle {
+    display: none;
+  }
+
+  .nav--nojs .nav__list {
+    display: block;
+    margin-top: 40px;
+    position: static;
+  }
+
+  .nav__link[href]:hover {
+    background-color: @hover-main-color;
+  }
+
+  .nav__link[href]:active {
+    background-color: @active-main-color;
+    color: @dark-opacity;
+  }
+}
+
+// Навигация в tablet и desktop
+@media (min-width: @tablet-width) {
+  .nav .nav__list {
+    display: flex;
+    width: @tablet-width;
+    margin-top: 0;
+    flex-wrap: wrap;
+  }
+
+  .nav__link[href]:hover {
+    color: @main-color;
+    background-color: @main-color-second;
+  }
+
+  .nav__link[href]:active {
+    color: @dark-opacity;
+    background-color: @main-color-second;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .nav .nav__list {
+    width: @desktop-width;
+  }
+}
+
+// Активная ссылка
+.nav__item--current .nav__link {
+  color: #766357;
 }

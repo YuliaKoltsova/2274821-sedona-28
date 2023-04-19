@@ -35,6 +35,15 @@
   width: @mobile-content-inner;
   height: 177px;
   background-color: @background-image-color;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-content;
+    height: 500px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 800px;
+  }
 }
 
 .presentation__image {

@@ -1,3 +1,4 @@
+// Общие стили формы
 .form {
   margin: 0;
   padding: 24px 0 24px 0;
@@ -20,32 +21,129 @@
   text-align: start;
 }
 
-.form__item:not(:last-child) {
+.form__item {
   margin-bottom: 16px;
+}
+
+.form__item:last-child {
+  margin-bottom: 0;
 }
 
 .form__legend {
   margin-bottom: 20px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    .text-big-bold;
+    margin-bottom: 28px;
+  }
 }
 
 .form__label-description {
   margin-left: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 0;
+  }
 }
 
+// Радиокнопки и чекбоксы
+@media (min-width: @tablet-width) {
+  .big-element .form__list {
+    display: grid;
+    margin: 0 auto;
+  }
+
+  .big-element .form__list--radio {
+    width: 579px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+  }
+
+  .big-element .form__list--checkbox {
+    width: 480px;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 16px;
+    column-gap: 32px;
+  }
+
+  .form__item {
+    margin: 0;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .big-element .form__list--radio {
+    width: 854px;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 17px;
+    column-gap: 28px;
+  }
+
+  .big-element .form__list--checkbox {
+    width: 871px;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: 17px;
+    column-gap: 28px;
+  }
+}
+
+// Поля ввода
 .form__form-input {
   width: 280px;
   background-color: @input-background;
   border: 0;
   padding: 16px;
+
+
+  &:hover {
+    background-color: @hover-form;
+  }
+
+  &:active {
+    background-color: @main-color-second;
+    box-shadow: inset 0 0 0 4px @hover-form;
+  }
+
+  @media (min-width: @tablet-width) {
+    width: 295px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 430px;
+  }
+}
+
+.form__form-input::placeholder {
+  color: @dark-opacity;
 }
 
 .form__form-input--textarea {
   resize: none;
+
+  @media (min-width: @tablet-width) {
+    width: @tablet-content;
+    min-height: 160px;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 768px;
+  }
 }
 
-.form__form-control {
-  padding: 10px 0 10px 0;
+// Радиокнопки и чекбоксы
+.form__item--control {
+  position: relative;
+}
+
+.form__control {
+  display: flex;
+}
+
+.form__label {
+  padding: 10px 10px 10px 0;
   text-transform: none;
 }
 
@@ -66,6 +164,32 @@
   border-radius: 4px;
 }
 
-.form__item--control {
-  display: flex;
+.form__input-radio[type="radio"]:checked + .form__control-mark::after {
+  .radio-control;
+  background-color: @description-color;
+}
+
+.form__input-checkbox[type="checkbox"]:checked + .form__control-mark::after {
+  .checkbox-control;
+}
+
+// Состояния радиокнопок и чекбоксов
+.form__input-radio[type="radio"]:hover + .form__control-mark,
+.form__input-checkbox[type="checkbox"]:hover + .form__control-mark {
+  background-color: @hover-form;
+}
+
+.form__input-radio[type="radio"]:active + .form__control-mark,
+.form__input-checkbox[type="checkbox"]:active + .form__control-mark {
+  background-color: @active-form;
+}
+
+.form__input-radio[type="radio"]:active + .form__control-mark::after {
+  .radio-control;
+  background-color: @active-form-control;
+}
+
+.form__input-checkbox[type="checkbox"]:active + .form__control-mark::after {
+  .checkbox-control;
+  opacity: 0.3;
 }
