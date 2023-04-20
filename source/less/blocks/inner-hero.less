@@ -1,25 +1,66 @@
 .inner-hero {
   .images;
-  background-image: url("../../img/inner-hero-background.jpg");
+  background-image: url("../../img/inner-hero-background-mobile.jpg");
   padding-top: 51px;
   padding-bottom: 67px;
+  position: relative;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/inner-hero-background-mobile@2x.jpg");
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 95px 154px 117px 157px;
+    padding-top: 95px;
+    padding-bottom: 117px;
+    background-image: url("../../img/inner-hero-background-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/inner-hero-background-tablet@2x.jpg");
+    }
   }
 
   @media (min-width: @desktop-width) {
-    padding: 103px 370px 120px 370px;
+    padding-top: 103px;
+    padding-bottom: 120px;
+    background-image: url("../../img/inner-hero-background-desktop.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/inner-hero-background-desktop@2x.jpg");
+    }
   }
 }
 
-.inner-hero__container {
+.inner-hero__text-container {
   width: 229px;
   height: 39px;
-  margin: 0 auto;
 
   @media (min-width: @tablet-width) {
     width: 457px;
     height: 78px;
+  }
+}
+
+.inner-hero__image {
+  width: 100%;
+  height: auto;
+}
+
+.inner-hero::after {
+  content: "";
+  position: absolute;
+  background-image: url("../../img/intro-triangle-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  width: 100%;
+  height: 57px;
+  bottom: 0;
+  right: 0;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/intro-triangle-tablet.svg");
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: url("../../img/intro-triangle-desktop.svg");
   }
 }

@@ -2,6 +2,10 @@
   text-align: start;
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    position: relative;
+  }
 }
 
 .photo-card__link {
@@ -13,6 +17,8 @@
 .photo-card__image {
   .images;
   display: block;
+  width: 100%;
+  height: auto;
 }
 
 .photo-card__title {
@@ -29,6 +35,13 @@
 .photo-card__description {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+  }
 }
 
 .photo-card__text-container {
@@ -61,6 +74,7 @@
 @media (min-width: @tablet-width) {
   .photo-card__link {
     margin-bottom: 0;
+    width: 100%;
     height: 267px;
   }
 
@@ -88,7 +102,7 @@
   }
 }
 
-@media (min-width: @tablet-width) and (max-width: 1199px) {
+@media (max-width: @desktop-width) {
   .photo-card:nth-of-type(odd):not(:first-of-type) .photo-card__description {
     background-color: @color-block-gallery;
   }

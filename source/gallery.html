@@ -33,8 +33,11 @@
     </header>
     <main class="main-container">
       <div class="inner-hero">
-        <div class="inner-hero__container container">
-          <img class="inner-hero__image" src="img/sedona-inner-text.svg" width="229" height="39" alt="Sedona.">
+        <div class="inner-hero__text-container container">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/sedona-inner-text-tablet.svg">
+            <img class="inner-hero__image" src="img/sedona-inner-text-mobile.svg" width="229" height="39" alt="Sedona.">
+          </picture>
         </div>
       </div>
       <section class="gallery">
@@ -46,7 +49,11 @@
             <ul class="gallery__list">
             <li class="gallery__item photo-card big-element">
               <a class="photo-card__link" href="#">
-                <img class="photo-card__image" src="img/gallery.jpg" width="280" height="280" alt="Дорога на закате.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/gallery-1-desktop.jpg 1x, img/gallery-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery-1-tablet.jpg 1x, img/gallery-1-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/gallery-1-mobile.jpg" srcset="img/gallery-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога на закате.">
+                </picture>
               </a>
               <div class="photo-card__description">
                 <div class="photo-card__text-container">
@@ -66,7 +73,11 @@
             </li>
             <li class="gallery__item photo-card">
               <a class="photo-card__link" href="#">
-                <img class="photo-card__image" src="img/gallery-2.jpg" width="280" height="280" alt="Цветущие кактусы на фоне гор.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/gallery-2-desktop.jpg 1x, img/gallery-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery-2-tablet.jpg 1x, img/gallery-2-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/gallery-2-mobile.jpg" srcset="img/gallery-2-mobile@2x.jpg 2x" width="280" height="280" alt="Цветущие кактусы на фоне гор.">
+                </picture>
               </a>
               <div class="photo-card__description">
                 <div class="photo-card__text-container">
@@ -86,7 +97,11 @@
             </li>
             <li class="gallery__item photo-card">
               <a class="photo-card__link" href="#">
-                <img class="photo-card__image" src="img/gallery-3.jpg" width="280" height="280" alt="Извилистая дорога в горах.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/gallery-3-desktop.jpg 1x, img/gallery-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery-3-tablet.jpg 1x, img/gallery-3-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/gallery-3-mobile.jpg" srcset="img/gallery-3-mobile@2x.jpg 2x" width="280" height="280" alt="Извилистая дорога в горах.">
+                </picture>
               </a>
               <div class="photo-card__description">
                 <div class="photo-card__text-container">
@@ -106,7 +121,11 @@
             </li>
             <li class="gallery__item photo-card">
               <a class="photo-card__link" href="#">
-                <img class="photo-card__image" src="img/gallery-4.jpg" width="280" height="280" alt="Мост Дьявола.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/gallery-4-desktop.jpg 1x, img/gallery-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery-4-tablet.jpg 1x, img/gallery-4-tablet@2x.jpg 2x">
+                  <img class="photo-card__image" src="img/gallery-4-mobile.jpg" srcset="img/gallery-4-mobile@2x.jpg 2x" width="280" height="280" alt="Мост Дьявола.">
+                </picture>
               </a>
               <div class="photo-card__description">
                 <div class="photo-card__text-container">
@@ -135,7 +154,11 @@
             <p class="presentation__description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
           </div>
           <div class="presentation__image-container">
-            <img class="presentation__image" src="img/video-mobile.jpg" width="280" height="177" alt="Видеопрезентация Седоны.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop.jpg 1x, img/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-tablet.jpg 1x, img/video-tablet@2x.jpg 2x">
+              <img class="presentation__image" src="img/video-mobile.jpg" srcset="img/video-mobile@2x.jpg 2x" width="280" height="177" alt="Видеопрезентация Седоны.">
+            </picture>
             <button class="presentation__button">
               <span class="visually-hidden">Показать видео.</span>
             </button>

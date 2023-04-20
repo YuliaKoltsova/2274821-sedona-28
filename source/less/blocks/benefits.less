@@ -70,30 +70,26 @@
 
 .benefits__item-container--first-element {
   padding-top: 70px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding-top: 52px;
   }
 }
 
-// Треугольник у первого блока преимущств в mobile
-// @media (min-width: @mobile-width) {
-//   .benefits__item-container--first-element::before {
-//     content: "";
-//     position: absolute;
-//     background-image: url("../../img/benefits-triangle.svg");
-//     width: 320px;
-//     height: 37px;
-//     top: 0;
-//     right: 0;
-//   }
-// }
-
-// @media (min-width: @tablet-width) {
-//   .benefits__item-container--first-element::before {
-//     content: "";
-//   }
-// }
+@media (max-width: @tablet-width) {
+  .benefits__item-container--first-element::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/benefits-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: 100% 37px;
+    width: 100%;
+    height: 37px;
+    top: 0;
+    right: 0;
+  }
+}
 
 .benefits__item-container {
   @media (min-width: @tablet-width) {
@@ -122,17 +118,26 @@
 
 // Оформление картинок
 .benefits__image-container {
-  width: 320px;
-  height: 256px;
+  width: 100%;
+  height: 260px;
 
   @media (min-width: @tablet-width) {
     width: 512px;
+    height: 256px;
     .images;
   }
 
   @media (min-width: @desktop-width) {
     width: 800px;
     .images;
+  }
+}
+
+.benefits__image {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    height: 256px;
   }
 }
 
@@ -266,6 +271,8 @@
 }
 
 // Меняет местами картинку и блок с текстом
-.benefits__image-container--reverse {
-  order: -1;
+@media (min-width: @tablet-width) {
+  .benefits__image-container--reverse {
+    order: -1;
+  }
 }
