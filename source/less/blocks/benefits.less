@@ -260,6 +260,7 @@
 
 .benefits__item-container--gray-element {
   padding: 24px 18px 24px 18px;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 41px 33px 63px 33px;
@@ -267,6 +268,12 @@
 
   @media (min-width: @desktop-width) {
     padding: 69px 50px;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .benefits__item--background-gray:not(:last-of-type)::after {
+    .decoration-line-small;
   }
 }
 

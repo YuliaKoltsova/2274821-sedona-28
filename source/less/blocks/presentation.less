@@ -25,7 +25,10 @@
 .presentation__title {
   margin: 0;
   margin-bottom: 27px;
-  .text-extra-big;
+
+  @media (min-width: @tablet-width) {
+    .text-extra-big;
+  }
 }
 
 .presentation__description {
