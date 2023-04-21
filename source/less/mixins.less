@@ -69,20 +69,20 @@
   background-position: center;
 }
 
-.decoration-line-small {
+.decoration-line {
   content: "";
   position: absolute;
-  width: @mobile-content-main;
-  height: 1px;
   background-color: @decoration-line;
+  height: 1px;
+}
+
+.decoration-line-small {
+  width: @mobile-content-main;
   right: 18px;
 }
 
 .decoration-line-big {
-  content: "";
-  position: absolute;
   width: @mobile-width;
-  height: 1px;
-  background-color: @decoration-line;
   right: -20px;
 }
+
