@@ -20,9 +20,14 @@
   line-height: 21px;
 }
 
-.text-extra-big {
+.text-extra-big-modal {
   font-size: 30px;
   line-height: 40px;
+}
+
+.text-extra-big {
+  font-size: 30px;
+  line-height: 26px;
 }
 
 .images {
@@ -62,4 +67,21 @@
   background-image: url("../../img/form-control-icon.svg");
   background-repeat: no-repeat;
   background-position: center;
+}
+
+.decoration-line {
+  content: "";
+  position: absolute;
+  background-color: @decoration-line;
+  height: 1px;
+}
+
+.decoration-line-small {
+  width: @mobile-content-main;
+  right: 18px;
+}
+
+.decoration-line-big {
+  width: @mobile-width;
+  right: -20px;
 }

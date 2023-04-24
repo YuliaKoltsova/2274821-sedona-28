@@ -23,7 +23,12 @@
 }
 
 .presentation__title {
+  margin: 0;
   margin-bottom: 27px;
+
+  @media (min-width: @tablet-width) {
+    .text-extra-big;
+  }
 }
 
 .presentation__description {
@@ -48,6 +53,8 @@
 
 .presentation__image {
   .images;
+  width: 100%;
+  height: auto;
 }
 
 .presentation__button {
@@ -62,4 +69,5 @@
   right: 50%;
   margin-right: -27px;
   padding: 0;
+  cursor: pointer;
 }

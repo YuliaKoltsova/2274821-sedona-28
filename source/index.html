@@ -4,6 +4,10 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicon/favicon-apple180.png">
+    <link rel="manifest" href="manifest.webmanifest">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
   <body class="page__body">
@@ -36,7 +40,11 @@
         <div class="hero__container">
           <h1 class="visually-hidden">Сайт города Седона.</h1>
           <div class="hero__text-container container">
-            <img src="img/text-index.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks.">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/text-index-tablet.svg">
+              <source media="(min-width: 768px)" srcset="img/text-index-tablet.svg">
+              <img class="hero__text" src="img/text-index-mobile.svg" width="282" height="214" alt="Welcome to the gorgeous Sedona. Because the Grand Canyon sucks.">
+            </picture>
           </div>
         </div>
       </section>
@@ -54,7 +62,11 @@
                 <p class="benefits__description-item">Седона не атракцион для туристов, там течет своя жизнь</p>
               </div>
               <div class="benefits__image-container">
-                <img class="benefits__image" src="img/benefits-photo1-mobile.jpg" width="320" height="256" alt="Дома в городе Седона.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/benefits-photo1-desktop.jpg 1x, img/benefits-photo1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/benefits-photo1-tablet.jpg 1x, img/benefits-photo1-tablet@2x.jpg 2x">
+                  <img class="benefits__image" src="img/benefits-photo1-mobile.jpg" srcset="img/benefits-photo1-mobile@2x.jpg 2x" width="320" height="260" alt="Дома в городе Седона.">
+                </picture>
               </div>
               </li>
               <li>
@@ -86,7 +98,11 @@
                 <p class="benefits__description-item">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
               <div class="benefits__image-container benefits__image-container--reverse">
-                <img class="benefits__image" src="img/benefits-photo2-mobile.jpg" width="320" height="256" alt="Мост дьявола.">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/benefits-photo2-desktop.jpg 1x, img/benefits-photo2-desktop@2x.jpg  2x">
+                  <source media="(min-width: 768px)" srcset="img/benefits-photo2-tablet.jpg 1x, img/benefits-photo2-tablet@2x.jpg  2x">
+                  <img class="benefits__image" src="img/benefits-photo2-mobile.jpg" srcset="img/benefits-photo2-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
+                </picture>
               </div>
               </li>
             <li class="benefits__item benefits__item--background-gray">
@@ -112,12 +128,12 @@
               </li>
           </ol>
       </section>
-      <section class="subscribe">
-        <div class="subscribe__container container">
-          <h2 class="visually-hidden">Подписаться на рассылку.</h2>
-          <p class="subscribe__title title">Заинтересовались?</p>
-          <p class="subscribe__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
-          <a class="subscribe__button button" href="#">Найти гостиницу</a>
+      <section class="search">
+        <div class="search__container container">
+          <h2 class="visually-hidden">Найти гостиницу.</h2>
+          <p class="search__title title">Заинтересовались?</p>
+          <p class="search__description">Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+          <a class="search__button button" href="#">Найти гостиницу</a>
         </div>
       </section>
       <section class="map">

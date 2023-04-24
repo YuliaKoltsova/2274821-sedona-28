@@ -12,6 +12,7 @@
 
 .gallery__title-container {
   padding: 37px 0 50px 0;
+  position: relative;
 
   @media (min-width: @tablet-width) {
     padding: 66px 0 67px 0;
@@ -19,10 +20,21 @@
 
   @media (min-width: @desktop-width) {
     padding: 100px 0 65px 0;
+    width: 800px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: @tablet-width) {
+  .gallery__title-container::after {
+    .decoration-line;
+    .decoration-line-big;
+    bottom: 25px;
   }
 }
 
 .gallery__title {
+  .text-extra-big;
   margin: 0;
   margin-bottom: 37px;
 }
@@ -45,5 +57,17 @@
 
   @media (min-width: @desktop-width) {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.gallery__item {
+  position: relative;
+}
+
+@media (max-width: @tablet-width) {
+  .gallery__item::after {
+    .decoration-line;
+    .decoration-line-big;
+    bottom: -25px;
   }
 }
