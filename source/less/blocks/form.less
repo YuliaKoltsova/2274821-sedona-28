@@ -160,7 +160,7 @@
 
 // Поля ввода
 .form__form-input {
-  width: 280px;
+  width: 100%;
   background-color: @input-background;
   border: 0;
   padding: 16px;
@@ -176,12 +176,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    width: 295px;
     margin-bottom: 15px;
-  }
-
-  @media (min-width: @desktop-width) {
-    width: 430px;
   }
 }
 
@@ -262,4 +257,9 @@
 .form__input-checkbox[type="checkbox"]:active + .form__control-mark::after {
   .checkbox-control;
   opacity: 0.3;
+}
+
+.form__input-radio:focus + .form__control-mark,
+.form__input-checkbox:focus + .form__control-mark {
+  outline: 2px solid @title-color;
 }
