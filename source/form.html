@@ -12,8 +12,11 @@
   </head>
   <body class="page__body">
     <header class="header">
-      <a class="header__logo" href="index.html">
-        <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип City of Sedona.">
+      <a class="header__logo">
+        <svg class="header__logo-image" width="185" height="96">
+          <use xlink:href="img/sprite.svg#logo-header"></use>
+        </svg>
+        <span class="visually-hidden">Логотип City of Sedona."</span>
       </a>
       <nav class="nav nav--closed nav--nojs">
         <button class="nav__toggle" type="button">
@@ -74,11 +77,11 @@
                 <ul class="form__list">
                   <li class="form__item">
                     <label class="form__label-description" for="phone">Контактный телефон*:</label>
-                    <input class="form__form-input form-text" id="phone" name="phone" type="tel" placeholder="Введите телефон" required>
+                    <input class="form__form-input form-text form__form-input--contacts form__form-input--contacts-phone" id="phone" name="phone" type="tel" placeholder="Введите телефон" required>
                   </li>
                   <li class="form__item">
                     <label class="form__label-description" for="email">Электронная почта*:</label>
-                    <input class="form__form-input form-text" id="email" name="e-mail" type="email" placeholder="Введите e-mail" required>
+                    <input class="form__form-input form-text form__form-input--contacts form__form-input--contacts-email" id="email" name="e-mail" type="email" placeholder="Введите e-mail" required>
                   </li>
                 </ul>
               </fieldset>
