@@ -11,23 +11,29 @@
 }
 
 .presentation__title-container {
-  padding: 43px 0 38px 0;
+  padding: 43px 2px 38px 2px;
 
   @media (min-width: @tablet-width) {
-    padding: 58px 0 66px 0;
+    width: 463px;
+    margin: 0 auto;
+    padding-top: 58px;
+    padding-bottom: 82px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 62px 0 64px 0;
+    padding: 59px 0 85px 0;
   }
 }
 
 .presentation__title {
+  .text-title;
+  .title;
   margin: 0;
   margin-bottom: 27px;
 
   @media (min-width: @tablet-width) {
     .text-extra-big;
+    margin-bottom: 33px;
   }
 }
 
@@ -65,9 +71,9 @@
   background-color: transparent;
   border: none;
   top: 50%;
-  margin-top: -24px;
+  margin-top: -27px;
   right: 50%;
-  margin-right: -27px;
+  margin-right: -24px;
   padding: 0;
   cursor: pointer;
 }
