@@ -1,14 +1,6 @@
 // Общие стили формы
-.form {
-  margin: 0;
-  padding: 24px 0 24px 0;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
-}
-
 .form__fieldset {
+  .text-title;
   border: none;
   margin: 0;
   padding: 0;
@@ -22,7 +14,7 @@
 }
 
 .form__item {
-  margin-bottom: 16px;
+  margin-bottom: 11px;
 }
 
 .form__item:last-child {
@@ -30,26 +22,82 @@
 }
 
 .form__legend {
-  margin-bottom: 20px;
+  margin-bottom: 17px;
   padding: 0;
 
   @media (min-width: @tablet-width) {
     .text-big-bold;
-    margin-bottom: 28px;
-  }
-}
-
-.form__legend--big-part {
-  @media (min-width: @tablet-width) {
-    width: 400px;
+    margin-bottom: 22px;
   }
 }
 
 .form__label-description {
+  .text-small;
+  font-weight: 400;
   margin-left: 16px;
+}
+
+.form__legend--big-part {
+  position: relative;
 
   @media (min-width: @tablet-width) {
-    margin-left: 0;
+    width: 400px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 41px;
+  }
+}
+
+// Декоративные горизонтальные полоски возле заголовков больших блоков форм
+.form__legend--big-part::before {
+  @media (min-width: @tablet-width) {
+    .decoration-line;
+    height: 1px;
+    width: 123px;
+    left: -123px;
+    top: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    left: -280px;
+  }
+}
+
+.form__legend--big-part::after {
+  @media (min-width: @tablet-width) {
+    .decoration-line;
+    height: 1px;
+    width: 123px;
+    right: -123px;
+    top: 50%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 280px;
+    right: -280px;
+  }
+}
+
+// Отступы у названий форм для PixelPerfect
+.form__legend--emotions-feature {
+  margin-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 28px;
+  }
+}
+
+.form__legend--sight-feature {
+  margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 22px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 53px;
   }
 }
 
@@ -63,13 +111,14 @@
   .big-element .form__list--radio {
     width: 579px;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 16px;
+    row-gap: 12px;
+    column-gap: 13px;
   }
 
   .big-element .form__list--checkbox {
     width: 480px;
     grid-template-columns: repeat(2, 1fr);
-    row-gap: 16px;
+    row-gap: 10px;
     column-gap: 32px;
   }
 
@@ -81,16 +130,16 @@
 @media (min-width: @desktop-width) {
   .big-element .form__list--radio {
     width: 854px;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 280px);
     row-gap: 17px;
     column-gap: 28px;
   }
 
   .big-element .form__list--checkbox {
     width: 871px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 182px 180px 163px 194px;
     row-gap: 17px;
-    column-gap: 28px;
+    column-gap: 54px;
   }
 }
 
@@ -112,7 +161,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
   }
 }
 
@@ -138,6 +187,7 @@
 
 .form__form-input--textarea {
   resize: none;
+  min-height: 150px;
 
   @media (min-width: @tablet-width) {
     width: @tablet-content;
@@ -160,8 +210,12 @@
 }
 
 .form__label {
-  padding: 10px 10px 10px 0;
+  padding: 14px 10px 10px 0;
   text-transform: none;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 16px;
+  }
 }
 
 .form__control-mark {
@@ -175,10 +229,19 @@
 
 .form__control-mark--radio {
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 2px;
+    margin-top: 6px;
+  }
 }
 
 .form__control-mark--checkbox {
   border-radius: 4px;
+
+  @media (min-width: @tablet-width) {
+    margin-top: 5px;
+  }
 }
 
 .form__input-radio[type="radio"]:checked + .form__control-mark::after {
