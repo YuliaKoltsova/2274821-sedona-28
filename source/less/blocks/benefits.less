@@ -3,17 +3,25 @@
   padding: 32px 18px 16px 18px;
 
   @media (min-width: @tablet-width) {
-    padding: 48px 33px 55px 33px;
+    max-width: 510px;
+    padding: 48px 0 56px 0;
   }
 
-  @media (min-width: @tablet-width) {
-    padding: 59px 50px 44px 50px;
+  @media (min-width: @desktop-width) {
+    padding: 59px 0 46px 0;
   }
 }
 
 .benefits__title {
+  .title;
+  .text-title;
   margin: 0;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    .text-big-bold;
+    margin-bottom: 27px;
+  }
 }
 
 .benefits__description {
@@ -52,15 +60,12 @@
   }
 }
 
-.benefits__item--background-blue .benefits__title-item {
-  color: @main-color-second;
-}
-
 .benefits__item-container--blue-element {
   padding: 37px 18px;
+  color: @main-color-second;
 
   @media (min-width: @tablet-width) {
-    padding: 52px 33px 31px 33px;
+    padding: 52px 35px 30px 36px;
   }
 
   @media (min-width: @desktop-width) {
@@ -70,19 +75,19 @@
 
 .benefits__item-container--first-element {
   padding-top: 70px;
+  padding-bottom: 40px;
   position: relative;
 
   @media (min-width: @tablet-width) {
     padding-top: 52px;
+    padding-bottom: 29px;
   }
 }
 
 @media (max-width: @tablet-width) {
   .benefits__item-container--first-element::after {
-    content: "";
-    position: absolute;
+    .insert-icon-general;
     background-image: url("../../img/benefits-triangle-mobile.svg");
-    background-repeat: no-repeat;
     background-size: 100% 37px;
     width: 100%;
     height: 37px;
@@ -103,17 +108,68 @@
 
 // Оформление текста
 .benefits__title-item {
+  .text-title;
+  .title;
   margin: 0;
   margin-bottom: 11px;
+
+  @media (min-width: @tablet-width) {
+    .text-big-bold;
+    margin-bottom: 13px;
+  }
+}
+
+.benefits__item-container--blue-element .benefits__title-item {
+  color: @main-color-second;
 }
 
 .benefits__number {
   margin: 0;
   margin-bottom: 17px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 25px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-bottom: 23px;
+  }
 }
 
 .benefits__description-item {
   margin: 0;
+}
+
+// Оформление текса, подгонка по PixelPerfect
+@media (min-width: @tablet-width) {
+  .benefits__title-item--feature {
+    max-width: 130px;
+    margin: 0 auto;
+    margin-bottom: 13px;
+  }
+
+  .benefits__description-item--grey-feature {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .benefits__title-item--blue-element-feature {
+    max-width: 216px;
+    margin: 0 auto;
+    margin-bottom: 14px;
+  }
+
+  .benefits__description-item--blue-element-feature {
+    max-width: 216px;
+    margin: 0 auto;
+  }
+
+  .benefits__description-item--grey-feature {
+    max-width: 300px;
+    margin: 0 auto;
+  }
 }
 
 // Оформление картинок
@@ -146,7 +202,7 @@
   display: grid;
   padding: 23px 18px 46px 18px;
   text-align: start;
-  row-gap: 49px;
+  row-gap: 25px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
@@ -165,7 +221,8 @@
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 158px 33px 60px 33px;
+    padding-right: 33px;
+    padding-left: 33px;
     text-align: center;
   }
 
@@ -177,10 +234,14 @@
 .benefits__title--internal-list {
   margin: 0;
   margin-bottom: 16px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .benefits__description--internal-list {
-  margin: 0;
+  margin: 0 auto;
 }
 
 // Иконки и их расположение
@@ -201,10 +262,16 @@
     .insert-icon-general;
     .insert-icon-mobile;
     background-image: url("../../img/mobile-icon-souvenirs.svg");
+    left: 4px;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .benefits__item--house {
+    padding-top: 159px;
+    padding-bottom: 60px;
+  }
+
   .benefits__item--house::before {
     .insert-icon-general;
     background-image: url("../../img/tablet-icon-house.svg");
@@ -214,6 +281,11 @@
     left: 88px;
   }
 
+  .benefits__item--food {
+    padding-top: 157px;
+    padding-bottom: 61px;
+  }
+
   .benefits__item--food::before {
     .insert-icon-general;
     background-image: url("../../img/tablet-icon-food.svg");
@@ -221,6 +293,11 @@
     height: 68px;
     top: 62px;
     left: 87px;
+  }
+
+  .benefits__item--souvenirs {
+    padding-top: 154px;
+    padding-bottom: 64px;
   }
 
   .benefits__item--souvenirs::before {
@@ -234,22 +311,37 @@
 }
 
 @media (min-width: @desktop-width) {
+  .benefits__item--house {
+    padding-top: 169px;
+    padding-bottom: 69px;
+  }
+
   .benefits__item--house::before {
     .insert-icon-general;
     top: 69px;
     left: 159px;
   }
 
+  .benefits__item--food {
+    padding-top: 166px;
+    padding-bottom: 71px;
+  }
+
   .benefits__item--food::before {
     .insert-icon-general;
     top: 72px;
-    left: 162px;
+    left: 157px;
+  }
+
+  .benefits__item--souvenirs {
+    padding-top: 170px;
+    padding-bottom: 67px;
   }
 
   .benefits__item--souvenirs::before {
     .insert-icon-general;
     top: 69px;
-    left: 159px;
+    left: 164px;
   }
 }
 
@@ -259,15 +351,15 @@
 }
 
 .benefits__item-container--gray-element {
-  padding: 24px 18px 24px 18px;
+  padding: 24px 18px 26px 18px;
   position: relative;
 
   @media (min-width: @tablet-width) {
-    padding: 41px 33px 63px 33px;
+    padding: 41px 33px 41px 33px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 69px 50px;
+    padding: 53px 50px;
   }
 }
 
@@ -275,6 +367,21 @@
   .benefits__item--background-gray:not(:last-of-type)::after {
     .decoration-line;
     .decoration-line-small;
+  }
+}
+
+// Блоки с серым фоном, подгонка по PixelPerfect
+@media (max-width: @tablet-width) {
+  .benefits__item-container--gray-element-first {
+    padding: 24px 26px;
+  }
+
+  .benefits__item-container--gray-element-second {
+    padding: 24px 35px 26px 35px;
+  }
+
+  .benefits__item-container--gray-element-third {
+    padding: 24px 35px 28px 35px;
   }
 }
 

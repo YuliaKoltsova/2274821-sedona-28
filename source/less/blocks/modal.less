@@ -1,3 +1,4 @@
+// Общие стили модальных окон
 .modal__container {
   position: fixed;
   left: 0;
@@ -16,6 +17,22 @@
   background-color: @main-color-second;
 }
 
+.modal__title {
+  .text-title;
+  margin: 0;
+  margin-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    .text-extra-big-modal;
+    margin-bottom: 23px;
+  }
+}
+
+.modal__description {
+  margin: 0;
+}
+
+// Контент модального окна с ошибкой
 .modal__content--error {
   padding: 45px 42px 35px 41px;
 
@@ -25,17 +42,26 @@
   }
 }
 
-.modal__content-text {
-  padding: 39px 39px 30px 37px;
+.modal__description--error {
+  margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    padding: 53px 99px 30px 97px;
+    margin-bottom: 47px;
   }
 }
 
-.modal__content-button {
-  padding: 20px;
-  background-color: @input-background;
+// Контент модального окна с успешной отправкой отзыва
+.modal__content-text {
+  padding: 39px 39px 51px 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 99px 46px 97px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
 }
 
 .modal__content--success {
@@ -44,26 +70,23 @@
   }
 }
 
-.modal__title {
-  margin: 0;
-  margin-bottom: 25px;
+// Кнопка модального окна
+.modal__content-button {
+  padding: 20px;
+  background-color: @input-background;
 
   @media (min-width: @tablet-width) {
-    .text-extra-big-modal;
+    padding: 44px 91px;
   }
-}
-
-.modal__description {
-  margin: 0;
-}
-
-.modal__description--error {
-  margin-bottom: 25px;
 }
 
 .modal__button {
   .text-title;
   margin: 0 auto;
+
+  @media (min-width: @tablet-width) {
+    .text-big-bold;
+  }
 }
 
 .modal__button--error {
@@ -79,7 +102,7 @@
   width: @mobile-content-inner;
 
   @media (min-width: @tablet-width) {
-    width: 272px;
+    width: 458px;
   }
 }
 
