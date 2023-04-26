@@ -1,3 +1,4 @@
+// Общие стили модальных окон
 .modal__container {
   position: fixed;
   left: 0;
@@ -16,43 +17,6 @@
   background-color: @main-color-second;
 }
 
-.modal__content--error {
-  padding: 45px 42px 35px 41px;
-
-  @media (min-width: @tablet-width) {
-    width: 400px;
-    padding: 50px 47px 49px 46px;
-  }
-}
-
-.modal__content-text {
-  padding: 39px 39px 51px 37px;
-
-  @media (min-width: @tablet-width) {
-    padding: 50px 99px 46px 97px;
-  }
-
-  @media (min-width: @desktop-width) {
-    padding-top: 40px;
-    padding-bottom: 55px;
-  }
-}
-
-.modal__content-button {
-  padding: 20px;
-  background-color: @input-background;
-
-  @media (min-width: @tablet-width) {
-    padding: 44px 91px;
-  }
-}
-
-.modal__content--success {
-  @media (min-width: @tablet-width) {
-    width: 640px;
-  }
-}
-
 .modal__title {
   .text-title;
   margin: 0;
@@ -68,11 +32,51 @@
   margin: 0;
 }
 
+// Контент модального окна с ошибкой
+.modal__content--error {
+  padding: 45px 42px 35px 41px;
+
+  @media (min-width: @tablet-width) {
+    width: 400px;
+    padding: 50px 47px 49px 46px;
+  }
+}
+
 .modal__description--error {
   margin-bottom: 25px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 47px;
+  }
+}
+
+// Контент модального окна с успешной отправкой отзыва
+.modal__content-text {
+  padding: 39px 39px 51px 37px;
+
+  @media (min-width: @tablet-width) {
+    padding: 50px 99px 46px 97px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 40px;
+    padding-bottom: 55px;
+  }
+}
+
+.modal__content--success {
+  @media (min-width: @tablet-width) {
+    width: 640px;
+  }
+}
+
+// Кнопка модального окна
+.modal__content-button {
+  padding: 20px;
+  background-color: @input-background;
+
+  @media (min-width: @tablet-width) {
+    padding: 44px 91px;
   }
 }
 
@@ -108,6 +112,6 @@
 }
 
 // Показывает/скрывает модальное окно "отзыв отправлен"
-// .modal__container--success-close {
-//   display: none;
-// }
+.modal__container--success-close {
+  display: none;
+}
