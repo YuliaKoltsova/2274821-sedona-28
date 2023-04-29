@@ -28,7 +28,7 @@ export const styles = () => {
 // Минификация
 //Styles
 
-export const stylesMin = () => {
+const stylesMin = () => {
   return gulp.src('source/css/style.css', {sourcemaps: true})
   .pipe (postcss([
     csso ()
@@ -91,7 +91,7 @@ const svg = () =>
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 
-export const sprite = () => {
+const sprite = () => {
   return gulp.src('source/img/sprite/*.svg')
   .pipe(svgo())
   .pipe(svgstore({
@@ -126,7 +126,7 @@ const createWebp = () => {
 //
 //Удалить папку build
 
-export const clean = () => {
+const clean = () => {
   return deleteAsync('build')
 }
 

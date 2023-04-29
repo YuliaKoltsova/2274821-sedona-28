@@ -13,10 +13,7 @@
   <body class="page__body">
     <header class="header">
       <a class="header__logo">
-        <svg class="header__logo-image" width="185" height="96">
-          <use xlink:href="img/sprite.svg#logo-header"></use>
-        </svg>
-        <span class="visually-hidden">Логотип City of Sedona."</span>
+        <img class="header__logo-image" src="img/logo.svg" width="185" height="96" alt="Логотип City of Sedona.">
       </a>
       <nav class="nav nav--closed nav--nojs">
         <button class="nav__toggle" type="button">
@@ -67,8 +64,10 @@
               <div class="benefits__image-container">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/benefits-photo1-desktop.jpg 1x, img/benefits-photo1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 1200px)" srcset="img/benefits-photo1-desktop.webp 1x, img/benefits-photo1-desktop@2x.webp 2x">
                   <source media="(min-width: 768px)" srcset="img/benefits-photo1-tablet.jpg 1x, img/benefits-photo1-tablet@2x.jpg 2x">
-                  <img class="benefits__image" src="img/benefits-photo1-mobile.jpg" srcset="img/benefits-photo1-mobile@2x.jpg 2x" width="320" height="260" alt="Дома в городе Седона.">
+                  <source media="(min-width: 768px)" srcset="img/benefits-photo1-tablet.webp 1x, img/benefits-photo1-tablet@2x.webp 2x">
+                  <img class="benefits__image" src="img/benefits-photo1-mobile.jpg" srcset="img/benefits-photo1-mobile.webp, img/benefits-photo1-mobile@2x.jpg 2x, img/benefits-photo1-mobile@2x.webp 2x" width="320" height="260" alt="Дома в городе Седона.">
                 </picture>
               </div>
               </li>
@@ -103,8 +102,10 @@
               <div class="benefits__image-container benefits__image-container--reverse">
                 <picture>
                   <source media="(min-width: 1200px)" srcset="img/benefits-photo2-desktop.jpg 1x, img/benefits-photo2-desktop@2x.jpg  2x">
+                  <source media="(min-width: 1200px)" srcset="img/benefits-photo2-desktop.webp 1x, img/benefits-photo2-desktop@2x.webp  2x">
                   <source media="(min-width: 768px)" srcset="img/benefits-photo2-tablet.jpg 1x, img/benefits-photo2-tablet@2x.jpg  2x">
-                  <img class="benefits__image" src="img/benefits-photo2-mobile.jpg" srcset="img/benefits-photo2-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
+                  <source media="(min-width: 768px)" srcset="img/benefits-photo2-tablet.webp 1x, img/benefits-photo2-tablet@2x.webp  2x">
+                  <img class="benefits__image" src="img/benefits-photo2-mobile.jpg" srcset="img/benefits-photo2-mobile.webp, img/benefits-photo2-mobile@2x.jpg 2x, img/benefits-photo2-mobile@2x.webp 2x" width="320" height="260" alt="Мост дьявола.">
                 </picture>
               </div>
               </li>
