@@ -124,6 +124,7 @@
 .feedback__wrapper {
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     grid-column: -1/1;
@@ -159,6 +160,11 @@
     .text-small;
     padding-left: 15px;
     color: @description-color;
+    max-width: 300px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 350px;
   }
 }
 

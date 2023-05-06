@@ -40,8 +40,10 @@
     <main class="main-container">
       <div class="inner-hero">
         <div class="inner-hero__text-container container">
-          <source media="(min-width: 768px)" srcset="img/sedona-inner-text-tablet.svg">
-          <img class="inner-hero__image" src="img/sedona-inner-text-mobile.svg" width="229" height="39" alt="Sedona.">
+          <picture>
+            <source media="(min-width: 768px)" srcset="img/sedona-inner-text-tablet.svg">
+            <img class="inner-hero__image" src="img/sedona-inner-text-mobile.svg" width="229" height="39" alt="Sedona.">
+          </picture>
         </div>
       </div>
       <section class="feedback">
@@ -85,7 +87,7 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback__form form big-element feedback__form--big-element feedback__form--impression-feature">
+            <div class="feedback__form form big-element form__form-big-element feedback__form--impression-feature">
               <fieldset class="form__fieldset">
                 <legend class="form__legend form__legend--big-part">Ваше общее впечатление:</legend>
                 <ul class="form__list form__list--radio">
@@ -113,7 +115,7 @@
                 </ul>
               </fieldset>
             </div>
-            <div class="feedback__form form big-element feedback__form--big-element feedback__form--big-text feedback__form--sight-feature">
+            <div class="feedback__form form big-element form__form-big-element feedback__form--big-text feedback__form--sight-feature">
               <fieldset class="form__fieldset">
                 <legend class="form__legend form__legend--big-part form__legend--sight-feature">Посещенные достопримечательности:</legend>
                 <ul class="form__list form__list--checkbox">
@@ -121,28 +123,28 @@
                     <label class="form__control">
                       <input class="form__input-checkbox visually-hidden" type="checkbox" name="bridge" id="bridge" checked>
                       <span class="form__control-mark form__control-mark--checkbox"></span>
-                      <span class="form__label form-text" for="bridge">Мост Дьявола</span>
+                      <span class="form__label form-text">Мост Дьявола</span>
                     </label>
                   </li>
                   <li class="form__item form__item--control">
                     <label class="form__control">
                       <input class="form__input-checkbox visually-hidden" type="checkbox" name="mountain" id="mountain" checked>
                       <span class="form__control-mark form__control-mark--checkbox form__control-mark--mountain"></span>
-                      <span class="form__label form-text" for="mountain">Гора-Колокол</span>
+                      <span class="form__label form-text">Гора-Колокол</span>
                     </label>
                   </li>
                   <li class="form__item form__item--control">
                     <label class="form__control">
                       <input class="form__input-checkbox visually-hidden" type="checkbox" name="park" id="park" checked>
                       <span class="form__control-mark form__control-mark--checkbox form__control-mark--park"></span>
-                      <span class="form__label form-text" for="park">Слайд-парк</span>
+                      <span class="form__label form-text">Слайд-парк</span>
                     </label>
                   </li>
                   <li class="form__item form__item--control">
                     <label class="form__control">
                       <input class="form__input-checkbox visually-hidden" type="checkbox" name="rocks" id="rocks">
                       <span class="form__control-mark form__control-mark--checkbox form__control-mark--rocks"></span>
-                      <span class="form__label form-text" for="rocks">Красные скалы</span>
+                      <span class="form__label form-text">Красные скалы</span>
                     </label>
                   </li>
                 </ul>
@@ -205,21 +207,21 @@
         </a>
       </div>
   </footer>
-    <div class="modal">
-      <div class="modal__container modal__container--error-close">
+    <div class="modal modal--error-close">
+      <div class="modal__container">
         <div class="modal__content modal__content--error">
-          <h2 class="modal__title">Что-то пошло не&nbspтак!</h2>
+          <h2 class="modal__title">Что-то пошло не&nbsp;так!</h2>
           <p class="modal__description modal__description--error">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
           <button class="modal__button modal__button--error button" type="button">Ок</button>
         </div>
       </div>
     </div>
-    <div class="modal">
-      <div class="modal__container modal__container--success-close">
+    <div class="modal modal--success-close">
+      <div class="modal__container">
         <div class="modal__content modal__content--success">
           <div class="modal__content-text">
             <h2 class="modal__title">Ваш отзыв отправлен!</h2>
-            <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbspближайшее время мы опубликуем его на сайте.</p>
+            <p class="modal__description">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В&nbsp;ближайшее время мы опубликуем его на сайте.</p>
           </div>
           <div class="modal__content-button">
             <button class="modal__button modal__button--success button" type="button">Закрыть окно</button>
