@@ -22,6 +22,7 @@
 }
 
 .form__legend {
+  margin: 0 auto;
   margin-bottom: 17px;
   padding: 0;
   max-width: 280px;
@@ -120,19 +121,19 @@
 
 // Радиокнопки и чекбоксы
 @media (min-width: @tablet-width) {
-  .big-element .form__list {
+  .form--big-element .form__list {
     display: grid;
     margin: 0 auto;
   }
 
-  .big-element .form__list--radio {
+  .form--big-element .form__list--radio {
     width: 579px;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 12px;
     column-gap: 13px;
   }
 
-  .big-element .form__list--checkbox {
+  .form--big-element .form__list--checkbox {
     width: 480px;
     grid-template-columns: repeat(2, 1fr);
     row-gap: 10px;
@@ -145,14 +146,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .big-element .form__list--radio {
+  .form--big-element .form__list--radio {
     width: 854px;
     grid-template-columns: repeat(3, 280px);
     row-gap: 17px;
     column-gap: 28px;
   }
 
-  .big-element .form__list--checkbox {
+  .form--big-element .form__list--checkbox {
     width: 871px;
     grid-template-columns: 182px 180px 163px 194px;
     row-gap: 17px;
@@ -243,6 +244,10 @@
   height: 46px;
   background-color: @input-background;
   position: relative;
+
+  @media (max-width: @tablet-width) {
+    margin-top: 3px;
+  }
 }
 
 .form__control-mark--radio {
@@ -290,6 +295,20 @@
 .form__input-checkbox[type="checkbox"]:active + .form__control-mark::after {
   .checkbox-control;
   opacity: 0.3;
+}
+
+.form__input-radio[type="radio"]:disabled + .form__control-mark,
+.form__input-checkbox[type="checkbox"]:disabled + .form__control-mark {
+  background-color: @decoration-line;
+  pointer-events: none;
+  cursor: default;
+}
+
+.form__input-radio[type="radio"]:disabled ~ .form__label,
+.form__input-checkbox[type="checkbox"]:disabled ~ .form__label {
+  color: @decoration-line;
+  pointer-events: none;
+  cursor: default;
 }
 
 .form__input-radio:focus + .form__control-mark,

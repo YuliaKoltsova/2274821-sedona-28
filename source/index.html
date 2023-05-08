@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
     <link href="css/style.min.css" rel="stylesheet">
+    <link rel="preload" href="fonts/ptsans.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicon/favicon-apple180.png">
@@ -51,7 +53,7 @@
       <section class="benefits">
           <h2 class="visually-hidden">Преимущества Седоны.</h2>
           <div class="benefits__title-container container">
-            <p class="benefits__title">Седона — небольшой городок&nbspв&nbspАризоне, заслуживающий большего!</p>
+            <p class="benefits__title">Седона — небольшой городок&nbsp;в&nbsp;Аризоне, заслуживающий большего!</p>
             <p class="benefits__description">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
           </div>
             <ol class="benefits__list">
@@ -59,7 +61,7 @@
               <div class="benefits__item-container benefits__item-container--blue-element benefits__item-container--first-element">
                 <h3 class="benefits__title-item benefits__title-item--blue-element-feature">Настоящий городок</h3>
                 <p class="benefits__number">— №1 —</p>
-                <p class="benefits__description-item">Седона не атракцион для туристов, там&nbspтечет своя жизнь</p>
+                <p class="benefits__description-item">Седона не атракцион для туристов, там&nbsp;течет своя жизнь</p>
               </div>
               <div class="benefits__image-container">
                 <picture>
@@ -68,7 +70,7 @@
                   <source type="image/webp" srcset="img/benefits-photo1-mobile.webp 1x, img/benefits-photo1-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/benefits-photo1-desktop.jpg 1x, img/benefits-photo1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/benefits-photo1-tablet.jpg 1x, img/benefits-photo1-tablet@2x.jpg 2x">
-                  <img class="benefits__image" src="img/benefits-photo1-mobile.jpg" srcset="img/benefits-photo1-mobile@2x.jpg 2x" width="320" height="260" alt="Дома в городе Седона.">
+                  <img class="benefits__image" src="img/benefits-photo1-mobile.jpg" srcset="img/benefits-photo1-mobile.jpg 1x, img/benefits-photo1-mobile@2x.jpg 2x" width="320" height="260" alt="Дома в городе Седона.">
                 </picture>
               </div>
               </li>
@@ -83,20 +85,20 @@
                   <li class="benefits__item benefits__item--internal benefits__item--food">
                     <div class="benefits__item-internal-container">
                       <h3 class="benefits__title benefits__title--internal-list">Еда</h3>
-                      <p class="benefits__description benefits__description--internal-list">Всегда заказывайте фирменный бургер, Вы&nbspне&nbspразочаруетесь!</p>
+                      <p class="benefits__description benefits__description--internal-list">Всегда заказывайте фирменный бургер, Вы&nbsp;не&nbsp;разочаруетесь!</p>
                     </div>
                   </li>
                   <li class="benefits__item benefits__item--internal benefits__item--souvenirs">
                     <div class="benefits__item-internal-container">
                       <h3 class="benefits__title benefits__title--internal-list">Сувениры</h3>
-                      <p class="benefits__description benefits__description--internal-list benefits__description--feature">Не только китайского, но&nbspи местного производства!</p>
+                      <p class="benefits__description benefits__description--internal-list benefits__description--feature">Не только китайского, <br>но&nbsp;и местного производства!</p>
                     </div>
                   </li>
                 </ul>
               </li>
             <li class="benefits__item benefits__item--background-blue">
               <div class="benefits__item-container benefits__item-container--blue-element">
-                <h3 class="benefits__title-item benefits__title-item--blue-element-feature">Там есть мост&nbspдьявола</h3>
+                <h3 class="benefits__title-item benefits__title-item--blue-element-feature">Там есть мост&nbsp;дьявола</h3>
                 <p class="benefits__number">— №2 —</p>
                 <p class="benefits__description-item benefits__description-item--blue-element-feature">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
               </div>
@@ -107,7 +109,7 @@
                   <source type="image/webp" srcset="img/benefits-photo2-mobile.webp 1x, img/benefits-photo2-mobile@2x.webp 2x">
                   <source media="(min-width: 1200px)" srcset="img/benefits-photo2-desktop.jpg 1x, img/benefits-photo2-desktop@2x.jpg  2x">
                   <source media="(min-width: 768px)" srcset="img/benefits-photo2-tablet.jpg 1x, img/benefits-photo2-tablet@2x.jpg  2x">
-                  <img class="benefits__image" src="img/benefits-photo2-mobile.jpg" srcset="img/benefits-photo2-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
+                  <img class="benefits__image" src="img/benefits-photo2-mobile.jpg" srcset="img/benefits-photo2-mobile.jpg 1x, img/benefits-photo2-mobile@2x.jpg 2x" width="320" height="260" alt="Мост дьявола.">
                 </picture>
               </div>
               </li>
@@ -122,7 +124,7 @@
               <div class="benefits__item-container benefits__item-container--gray-element benefits__item-container--gray-element-second">
                 <h3 class="benefits__title-item benefits__title-item--feature">Красивая дорога</h3>
                 <p class="benefits__number">— №4 —</p>
-                <p class="benefits__description-item benefits__description-item--grey-feature">Ехать в Седону из Лас-Вегаса совсем не&nbspскучно!</p>
+                <p class="benefits__description-item benefits__description-item--grey-feature">Ехать в Седону из Лас-Вегаса совсем не&nbsp;скучно!</p>
               </div>
               </li>
             <li class="benefits__item benefits__item--background-gray">
@@ -138,8 +140,8 @@
         <div class="search__container container">
           <h2 class="visually-hidden">Найти гостиницу.</h2>
           <p class="search__title">Заинтересовались?</p>
-          <p class="search__description">Укажите предполагаемые даты поездки, и&nbspмы&nbspпокажем&nbspвам&nbspлучшие предложения гостиниц в седоне</p>
-          <a class="search__button button" href="#">Найти гостиницу</a>
+          <p class="search__description">Укажите предполагаемые даты поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие предложения гостиниц в седоне</p>
+          <a class="search__button button" href="search.html">Найти гостиницу</a>
         </div>
       </section>
       <section class="map">

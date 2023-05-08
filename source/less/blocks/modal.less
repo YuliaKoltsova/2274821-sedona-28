@@ -43,7 +43,7 @@
 }
 
 .modal__description--error {
-  margin-bottom: 25px;
+  margin-bottom: 28px;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 47px;
@@ -98,6 +98,11 @@
   }
 }
 
+// Показывает/скрывает модальное окно с ошибкой
+.modal--error-close {
+  display: none;
+}
+
 .modal__button--success {
   width: @mobile-content-inner;
 
@@ -106,12 +111,7 @@
   }
 }
 
-// Показывает/скрывает модальное окно с ошибкой
-.modal__container--error-close {
-  display: none;
-}
-
 // Показывает/скрывает модальное окно "отзыв отправлен"
-.modal__container--success-close {
+.modal--success-close {
   display: none;
 }

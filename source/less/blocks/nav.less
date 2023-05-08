@@ -55,6 +55,22 @@
   }
 }
 
+.nav__item:last-of-type {
+  position: relative;
+}
+
+.nav__item:last-of-type::after {
+  @media (max-width: @tablet-width) {
+    content: "";
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.2) 100%);
+    width: 320px;
+    height: 7px;
+    bottom: 0;
+    right: 0;
+  }
+}
+
 // Место под логотип
 .nav__item:nth-of-type(4n+2) {
   @media (min-width: @tablet-width) {
